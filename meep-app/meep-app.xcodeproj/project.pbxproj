@@ -13,6 +13,8 @@
 		7B2E37D324CC9F7800617413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2E37D124CC9F7800617413 /* LaunchScreen.storyboard */; };
 		7B2E37DE24CC9F7800617413 /* meep_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37DD24CC9F7800617413 /* meep_appTests.swift */; };
 		7B2E37E924CC9F7800617413 /* meep_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37E824CC9F7800617413 /* meep_appUITests.swift */; };
+		7B2E380624CCA64700617413 /* MeepAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E380524CCA64700617413 /* MeepAPI.swift */; };
+		7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E380724CCA73200617413 /* MeepAPIProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		7B2E37E424CC9F7800617413 /* meep-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "meep-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2E37E824CC9F7800617413 /* meep_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meep_appUITests.swift; sourceTree = "<group>"; };
 		7B2E37EA24CC9F7800617413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B2E380524CCA64700617413 /* MeepAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepAPI.swift; sourceTree = "<group>"; };
+		7B2E380724CCA73200617413 /* MeepAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepAPIProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		7B2E37DC24CC9F7800617413 /* meep-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B2E380424CCA60100617413 /* Mocks */,
+				7B2E380324CCA5A200617413 /* Services */,
 				7B2E37DD24CC9F7800617413 /* meep_appTests.swift */,
 				7B2E37DF24CC9F7800617413 /* Info.plist */,
 			);
@@ -143,6 +149,8 @@
 		7B2E37F924CCA01000617413 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7B2E380524CCA64700617413 /* MeepAPI.swift */,
+				7B2E380724CCA73200617413 /* MeepAPIProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -200,6 +208,20 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		7B2E380324CCA5A200617413 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7B2E380424CCA60100617413 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,8 +354,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2E380624CCA64700617413 /* MeepAPI.swift in Sources */,
 				7B2E37C724CC9F7400617413 /* AppDelegate.swift in Sources */,
 				7B2E37C924CC9F7400617413 /* SceneDelegate.swift in Sources */,
+				7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
