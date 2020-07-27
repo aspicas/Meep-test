@@ -15,6 +15,14 @@
 		7B2E37E924CC9F7800617413 /* meep_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37E824CC9F7800617413 /* meep_appUITests.swift */; };
 		7B2E380624CCA64700617413 /* MeepAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E380524CCA64700617413 /* MeepAPI.swift */; };
 		7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E380724CCA73200617413 /* MeepAPIProtocol.swift */; };
+		7BA7B0EA24CF19BA00A10BF5 /* MapProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0E924CF19BA00A10BF5 /* MapProtocols.swift */; };
+		7BA7B0EC24CF1DF900A10BF5 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0EB24CF1DF900A10BF5 /* Transport.swift */; };
+		7BA7B0EE24CF209C00A10BF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0ED24CF209C00A10BF5 /* MapViewController.swift */; };
+		7BA7B0F024CF20B100A10BF5 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA7B0EF24CF20B100A10BF5 /* Map.storyboard */; };
+		7BA7B0F224CF215300A10BF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F124CF215300A10BF5 /* Constants.swift */; };
+		7BA7B0F424CF22AA00A10BF5 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F324CF22AA00A10BF5 /* MapRouter.swift */; };
+		7BA7B0F624CF23F300A10BF5 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */; };
+		7BA7B0F824CF267600A10BF5 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		7B2E37EA24CC9F7800617413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B2E380524CCA64700617413 /* MeepAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepAPI.swift; sourceTree = "<group>"; };
 		7B2E380724CCA73200617413 /* MeepAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepAPIProtocol.swift; sourceTree = "<group>"; };
+		7BA7B0E924CF19BA00A10BF5 /* MapProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProtocols.swift; sourceTree = "<group>"; };
+		7BA7B0EB24CF1DF900A10BF5 /* Transport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
+		7BA7B0ED24CF209C00A10BF5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7BA7B0EF24CF20B100A10BF5 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		7BA7B0F124CF215300A10BF5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7BA7B0F324CF22AA00A10BF5 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +147,7 @@
 			children = (
 				7B2E37CF24CC9F7800617413 /* Assets.xcassets */,
 				7B2E37D424CC9F7800617413 /* Info.plist */,
+				7BA7B0F124CF215300A10BF5 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -171,6 +188,7 @@
 		7B2E37FD24CCA3FE00617413 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -178,6 +196,7 @@
 		7B2E37FE24CCA40400617413 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -185,6 +204,7 @@
 		7B2E37FF24CCA41100617413 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7BA7B0E924CF19BA00A10BF5 /* MapProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -192,6 +212,7 @@
 		7B2E380024CCA41A00617413 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				7BA7B0F324CF22AA00A10BF5 /* MapRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -199,6 +220,8 @@
 		7B2E380124CCA41F00617413 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7BA7B0ED24CF209C00A10BF5 /* MapViewController.swift */,
+				7BA7B0EF24CF20B100A10BF5 /* Map.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +229,7 @@
 		7B2E380224CCA46B00617413 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7BA7B0EB24CF1DF900A10BF5 /* Transport.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -330,6 +354,7 @@
 			files = (
 				7B2E37D324CC9F7800617413 /* LaunchScreen.storyboard in Resources */,
 				7B2E37D024CC9F7800617413 /* Assets.xcassets in Resources */,
+				7BA7B0F024CF20B100A10BF5 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B2E380624CCA64700617413 /* MeepAPI.swift in Sources */,
+				7BA7B0EC24CF1DF900A10BF5 /* Transport.swift in Sources */,
 				7B2E37C724CC9F7400617413 /* AppDelegate.swift in Sources */,
+				7BA7B0EA24CF19BA00A10BF5 /* MapProtocols.swift in Sources */,
 				7B2E37C924CC9F7400617413 /* SceneDelegate.swift in Sources */,
 				7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */,
+				7BA7B0F824CF267600A10BF5 /* MapInteractor.swift in Sources */,
+				7BA7B0EE24CF209C00A10BF5 /* MapViewController.swift in Sources */,
+				7BA7B0F624CF23F300A10BF5 /* MapPresenter.swift in Sources */,
+				7BA7B0F224CF215300A10BF5 /* Constants.swift in Sources */,
+				7BA7B0F424CF22AA00A10BF5 /* MapRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
