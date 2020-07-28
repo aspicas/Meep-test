@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B1E757D24D0B0DF00F09769 /* Map+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E757C24D0B0DF00F09769 /* Map+Extension.swift */; };
 		7B2E37C724CC9F7400617413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37C624CC9F7400617413 /* AppDelegate.swift */; };
 		7B2E37C924CC9F7400617413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37C824CC9F7400617413 /* SceneDelegate.swift */; };
 		7B2E37D024CC9F7800617413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2E37CF24CC9F7800617413 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B1E757C24D0B0DF00F09769 /* Map+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map+Extension.swift"; sourceTree = "<group>"; };
 		7B2E37C324CC9F7400617413 /* meep-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meep-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2E37C624CC9F7400617413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B2E37C824CC9F7400617413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				7B2E37C624CC9F7400617413 /* AppDelegate.swift */,
 				7B2E37C824CC9F7400617413 /* SceneDelegate.swift */,
 				7B2E37D124CC9F7800617413 /* LaunchScreen.storyboard */,
+				7B1E757C24D0B0DF00F09769 /* Map+Extension.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */,
 				7BA7B0F824CF267600A10BF5 /* MapInteractor.swift in Sources */,
 				7BA7B0EE24CF209C00A10BF5 /* MapViewController.swift in Sources */,
+				7B1E757D24D0B0DF00F09769 /* Map+Extension.swift in Sources */,
 				7BA7B0F624CF23F300A10BF5 /* MapPresenter.swift in Sources */,
 				7BA7B0F224CF215300A10BF5 /* Constants.swift in Sources */,
 				7BA7B0F424CF22AA00A10BF5 /* MapRouter.swift in Sources */,

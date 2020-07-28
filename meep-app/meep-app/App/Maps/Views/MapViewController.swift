@@ -22,6 +22,8 @@ class MapViewController: UIViewController {
         title = Constants.mapViewControllerTitle
 //        startLoadingAnimation()
         stopLoadingAnimation()
+        let initialLocation = CLLocation(latitude: 38.7437395, longitude: -9.2104151)
+        mapView.centerToLocation(initialLocation, regionRadius: 20000)
 //        presenter?.fetchTransport(lowerLeftLat: 38.711046, lowerLeftLon: -9.160096, upperRightLat: 38.739429, upperRightLon: -9.137115)
     }
     
