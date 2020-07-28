@@ -14,9 +14,33 @@
                     <view key="view" contentMode="scaleToFill" id="QIS-KV-Ji1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-rh-UQL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-ka-sZB">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eQI-qn-7Kc"/>
+                                    <constraint firstAttribute="width" constant="40" id="eou-w4-1n0"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aYn-rh-UQL" firstAttribute="top" secondItem="b0G-im-6Ij" secondAttribute="top" id="2UR-93-xCH"/>
+                            <constraint firstItem="L1G-ka-sZB" firstAttribute="centerY" secondItem="QIS-KV-Ji1" secondAttribute="centerY" id="3pM-XE-sG0"/>
+                            <constraint firstItem="aYn-rh-UQL" firstAttribute="leading" secondItem="b0G-im-6Ij" secondAttribute="leading" id="9Pi-Ut-iMW"/>
+                            <constraint firstItem="L1G-ka-sZB" firstAttribute="centerX" secondItem="QIS-KV-Ji1" secondAttribute="centerX" id="Zu2-Lb-mP5"/>
+                            <constraint firstItem="b0G-im-6Ij" firstAttribute="trailing" secondItem="aYn-rh-UQL" secondAttribute="trailing" id="ah9-nS-v9m"/>
+                            <constraint firstItem="b0G-im-6Ij" firstAttribute="bottom" secondItem="aYn-rh-UQL" secondAttribute="bottom" id="juB-RC-CJ8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b0G-im-6Ij"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="L1G-ka-sZB" id="1Mn-Zh-gTT"/>
+                        <outlet property="mapView" destination="aYn-rh-UQL" id="2VU-Xt-XFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlb-DZ-oR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

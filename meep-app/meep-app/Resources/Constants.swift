@@ -21,5 +21,6 @@ class Constants {
     //General
     static let error = "Error"
     static let problemFetchinNotice = "Problem Fetching Notice"
-    static let okay = "Ok"
+    static let reload = "Reload"
+    static let cancel = "Cancel"
 }
