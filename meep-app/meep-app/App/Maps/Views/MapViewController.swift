@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.mapViewControllerTitle
-        presenter?.fetchTransport()
+        presenter?.fetchTransport(lowerLeftLat: 38.711046, lowerLeftLon: -9.160096, upperRightLat: 38.739429, upperRightLon: -9.137115)
     }
 }
 

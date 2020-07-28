@@ -16,17 +16,18 @@ public enum Link: String {
 }
 
 public enum Service {
-    case loadMap(lowerLeftLat: Double, lowerLeftLon: Double, upperRightLat: Double, upperRightLon: Double)
+    case loadMap
 }
 
 extension Service {
     var path: String {
         switch self {
-        case .loadMap(let lowerLeftLat, let lowerLeftLon, let upperRightLat, let upperRightLon):
-            return "/routers/lisboa/resources?lowerLeftLatLon=\(lowerLeftLat),\(lowerLeftLon)&upperRightLatLon=\(upperRightLat),\(upperRightLon)​"
+        case .loadMap:
+            return "/routers/lisboa/resources"
         }
     }
 }
+
 
 public enum CallError: Error {
     case parseData
@@ -39,20 +40,19 @@ public enum CallError: Error {
 }
 
 class MeepAPI: MeepAPIProtocol {
-    static func callService(link: Link,
-                            method: Methods,
-                            service: Service,
-                            params: Dictionary<String, String>?,
-                            body: Dictionary<String, Any>?,
-                            completion: @escaping (Result<Dictionary<String, AnyObject>, CallError>) -> Void,
-                            session: URLSession) {
+    static func callService<T>(link: Link,
+                               method: Methods,
+                               service: Service,
+                               params: Dictionary<String, String>? = nil,
+                               body: Dictionary<String, Any>?,
+                               completion: @escaping (Result<T, CallError>) -> Void,
+                               session: URLSession) where T: Decodable {
         
         var urlComponents = URLComponents(string: link.rawValue + service.path)
         urlComponents?.queryItems = params?.map{ (arg) -> URLQueryItem  in
             let (key, value) = arg
             return URLQueryItem(name: key, value: value)
         }
-
         guard let url = urlComponents?.url, !url.absoluteString.isEmpty else {
             completion(Result.failure(CallError.urlError))
             return
@@ -67,11 +67,12 @@ class MeepAPI: MeepAPIProtocol {
         
         MeepAPI.callAction(request: request,
                            session: session,
-                           completion: completion) { data -> [String: AnyObject]? in
+                           completion: completion) { data -> T? in
                             do {
-                                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                                print("response: \(json)")
-                                return json
+                                let decoder = JSONDecoder()
+                                let obj = try decoder.decode(T.self, from: data ?? Data())
+//                                print("response: \(obj)")
+                                return obj
                             } catch {
                                 return nil
                             }

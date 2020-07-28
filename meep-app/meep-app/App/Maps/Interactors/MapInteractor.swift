@@ -24,21 +24,19 @@ class MapInteractor: MapInputInteractor {
                         lowerLeftLat: Double, lowerLeftLon: Double,
                         upperRightLat: Double, upperRightLon: Double) {
         
+        let params: Dictionary<String, String> = ["lowerLeftLat": "\(lowerLeftLat)",
+                                                  "lowerLeftLon": "\(lowerLeftLon)",
+                                                  "upperRightLat": "\(upperRightLat)",
+                                                  "upperRightLon": "\(upperRightLon)"];
+        
         networkManagement.callService(link: .baseURL,
                                       method: .get,
-                                      service: .loadMap(lowerLeftLat: lowerLeftLat, lowerLeftLon: lowerLeftLon,
-                                                        upperRightLat: upperRightLat, upperRightLon: upperRightLon),
-                                      params: nil,
-                                      body: nil) { result in
-            
+                                      service: .loadMap,
+                                      params: params,
+                                      body: nil) { (result : Result<[Transport], CallError>) in
+
                                         switch result {
-                                        case .success(let json):
-                                            guard json.count > 0 else {//}, let results = json["results"] as? [Dictionary<String, Any>] else {
-                                                self.presenter?.handleTransportSuccess(transports: [])
-                                                return
-                                            }
-                                            var transports: [Transport] = []
-                                            //TODO: handle the change
+                                        case .success(let transports):
                                             self.presenter?.handleTransportSuccess(transports: transports)
                                         case .failure(let error):
                                             self.presenter?.handleError(error: error)

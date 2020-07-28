@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TransportElement: Codable {
+struct Transport: Codable {
     let id, name: String
     let x, y: Double
     let scheduledArrival, locationType: Int?
@@ -49,5 +49,3 @@ enum ResourceType: String, Codable {
     case electricCar = "ELECTRIC_CAR"
     case moped = "MOPED"
 }
-
-typealias Transport = [TransportElement]

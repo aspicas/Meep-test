@@ -10,9 +10,9 @@ import UIKit
 
 class MapRouter: MapInputRouter {
     static func createModule(storyboard: UIStoryboard = UIStoryboard(name: Constants.mapStoryboard, bundle: Bundle.main),
-                             presenter: MapInputPresenter & MapOutputPresenter,
-                             interactor: MapInputInteractor,
-                             router: MapInputRouter) -> UIViewController {
+                             presenter: MapInputPresenter & MapOutputPresenter = MapPresenter(),
+                             interactor: MapInputInteractor = MapInteractor(),
+                             router: MapInputRouter = MapRouter()) -> UIViewController {
         
         let view = storyboard.instantiateViewController(identifier: Constants.mapViewControllerIdentifier) as! MapViewController
         
