@@ -16,15 +16,16 @@ class MapViewController: UIViewController {
     
     var presenter: MapInputPresenter?
     var transportArray: [Transport] = []
+    var pins: [Pin] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.mapViewControllerTitle
-//        startLoadingAnimation()
-        stopLoadingAnimation()
+        startLoadingAnimation()
         let initialLocation = CLLocation(latitude: 38.7437395, longitude: -9.2104151)
         mapView.centerToLocation(initialLocation, regionRadius: 20000)
-//        presenter?.fetchTransport(lowerLeftLat: 38.711046, lowerLeftLon: -9.160096, upperRightLat: 38.739429, upperRightLon: -9.137115)
+        mapView.delegate = self
+        presenter?.fetchTransport(lowerLeftLat: 38.711046, lowerLeftLon: -9.160096, upperRightLat: 38.739429, upperRightLon: -9.137115)
     }
     
     private func startLoadingAnimation(){
@@ -33,16 +34,23 @@ class MapViewController: UIViewController {
     }
     
     private func stopLoadingAnimation() {
-        activityIndicatorView.stopAnimating()
-        activityIndicatorView.isHidden = true
+        self.activityIndicatorView.stopAnimating()
+        self.activityIndicatorView.isHidden = true
     }
     
 }
 
 extension MapViewController: MapOutputView {
     func getTransports(transports: [Transport]) {
-        stopLoadingAnimation()
-        transportArray = transports
+        DispatchQueue.main.async {
+            self.stopLoadingAnimation()
+            self.pins = transports.map { transport -> Pin in
+                return Pin(title: transport.name,
+                           companyZoneId: transport.companyZoneID,
+                           coordinate: CLLocationCoordinate2D(latitude: transport.lat ?? 0, longitude: transport.lon ?? 0))
+            }
+            self.mapView.addAnnotations(self.pins)
+        }
     }
     
     func getError(error: Error) {
@@ -66,3 +74,28 @@ extension MapViewController: MapOutputView {
     }
 }
 
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        guard let pin = annotation as? Pin else {
+            return nil
+        }
+        
+        let identifier = "pin"
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+            dequeuedView.annotation = pin
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            view.markerTintColor = pin.pinTintColor
+        }
+        
+        return view
+        
+    }
+}

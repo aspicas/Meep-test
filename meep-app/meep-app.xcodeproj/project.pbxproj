@@ -24,6 +24,7 @@
 		7BA7B0F424CF22AA00A10BF5 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F324CF22AA00A10BF5 /* MapRouter.swift */; };
 		7BA7B0F624CF23F300A10BF5 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */; };
 		7BA7B0F824CF267600A10BF5 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */; };
+		7BC60C3524D1DF9A0002B04C /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3424D1DF9A0002B04C /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		7BA7B0F324CF22AA00A10BF5 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		7BC60C3424D1DF9A0002B04C /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			children = (
 				7BA7B0ED24CF209C00A10BF5 /* MapViewController.swift */,
 				7BA7B0EF24CF20B100A10BF5 /* Map.storyboard */,
+				7BC60C3424D1DF9A0002B04C /* Pin.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				7BA7B0EA24CF19BA00A10BF5 /* MapProtocols.swift in Sources */,
 				7B2E37C924CC9F7400617413 /* SceneDelegate.swift in Sources */,
 				7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */,
+				7BC60C3524D1DF9A0002B04C /* Pin.swift in Sources */,
 				7BA7B0F824CF267600A10BF5 /* MapInteractor.swift in Sources */,
 				7BA7B0EE24CF209C00A10BF5 /* MapViewController.swift in Sources */,
 				7B1E757D24D0B0DF00F09769 /* Map+Extension.swift in Sources */,
