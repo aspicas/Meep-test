@@ -12,7 +12,6 @@
 		7B2E37C924CC9F7400617413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37C824CC9F7400617413 /* SceneDelegate.swift */; };
 		7B2E37D024CC9F7800617413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2E37CF24CC9F7800617413 /* Assets.xcassets */; };
 		7B2E37D324CC9F7800617413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2E37D124CC9F7800617413 /* LaunchScreen.storyboard */; };
-		7B2E37DE24CC9F7800617413 /* meep_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37DD24CC9F7800617413 /* meep_appTests.swift */; };
 		7B2E37E924CC9F7800617413 /* meep_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E37E824CC9F7800617413 /* meep_appUITests.swift */; };
 		7B2E380624CCA64700617413 /* MeepAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E380524CCA64700617413 /* MeepAPI.swift */; };
 		7B2E380824CCA73200617413 /* MeepAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E380724CCA73200617413 /* MeepAPIProtocol.swift */; };
@@ -27,6 +26,11 @@
 		7BC60C3524D1DF9A0002B04C /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3424D1DF9A0002B04C /* Pin.swift */; };
 		7BC60C3924D1F2DF0002B04C /* MeepAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3824D1F2DF0002B04C /* MeepAPITest.swift */; };
 		7BC60C3B24D1F3770002B04C /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */; };
+		7BC60C3F24D1FD320002B04C /* MapRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3E24D1FD320002B04C /* MapRouterTest.swift */; };
+		7BC60C4124D1FED80002B04C /* UIStoryboardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C4024D1FED80002B04C /* UIStoryboardMock.swift */; };
+		7BC60C4424D1FFFC0002B04C /* MapViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C4324D1FFFC0002B04C /* MapViewControllerMock.swift */; };
+		7BC60C4624D200E10002B04C /* MapPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C4524D200E10002B04C /* MapPresenterMock.swift */; };
+		7BC60C4824D201800002B04C /* MapInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C4724D201800002B04C /* MapInteractorMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,6 @@
 		7B2E37D224CC9F7800617413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B2E37D424CC9F7800617413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "meep-app/Resources/Info.plist"; sourceTree = SOURCE_ROOT; };
 		7B2E37D924CC9F7800617413 /* meep-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "meep-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B2E37DD24CC9F7800617413 /* meep_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meep_appTests.swift; sourceTree = "<group>"; };
 		7B2E37DF24CC9F7800617413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B2E37E424CC9F7800617413 /* meep-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "meep-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2E37E824CC9F7800617413 /* meep_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meep_appUITests.swift; sourceTree = "<group>"; };
@@ -73,6 +76,11 @@
 		7BC60C3424D1DF9A0002B04C /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		7BC60C3824D1F2DF0002B04C /* MeepAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepAPITest.swift; sourceTree = "<group>"; };
 		7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		7BC60C3E24D1FD320002B04C /* MapRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterTest.swift; sourceTree = "<group>"; };
+		7BC60C4024D1FED80002B04C /* UIStoryboardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardMock.swift; sourceTree = "<group>"; };
+		7BC60C4324D1FFFC0002B04C /* MapViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerMock.swift; sourceTree = "<group>"; };
+		7BC60C4524D200E10002B04C /* MapPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterMock.swift; sourceTree = "<group>"; };
+		7BC60C4724D201800002B04C /* MapInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +141,9 @@
 		7B2E37DC24CC9F7800617413 /* meep-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				7BC60C3C24D1FC420002B04C /* Map */,
 				7B2E380424CCA60100617413 /* Mocks */,
 				7B2E380324CCA5A200617413 /* Services */,
-				7B2E37DD24CC9F7800617413 /* meep_appTests.swift */,
 				7B2E37DF24CC9F7800617413 /* Info.plist */,
 			);
 			path = "meep-appTests";
@@ -255,9 +263,37 @@
 		7B2E380424CCA60100617413 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				7BC60C4224D1FFC50002B04C /* Map */,
 				7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */,
+				7BC60C4024D1FED80002B04C /* UIStoryboardMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7BC60C3C24D1FC420002B04C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7BC60C3D24D1FD040002B04C /* Router */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		7BC60C3D24D1FD040002B04C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7BC60C3E24D1FD320002B04C /* MapRouterTest.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7BC60C4224D1FFC50002B04C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7BC60C4324D1FFFC0002B04C /* MapViewControllerMock.swift */,
+				7BC60C4524D200E10002B04C /* MapPresenterMock.swift */,
+				7BC60C4724D201800002B04C /* MapInteractorMock.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC60C3B24D1F3770002B04C /* URLProtocolMock.swift in Sources */,
-				7B2E37DE24CC9F7800617413 /* meep_appTests.swift in Sources */,
+				7BC60C4624D200E10002B04C /* MapPresenterMock.swift in Sources */,
+				7BC60C4424D1FFFC0002B04C /* MapViewControllerMock.swift in Sources */,
+				7BC60C4824D201800002B04C /* MapInteractorMock.swift in Sources */,
+				7BC60C3F24D1FD320002B04C /* MapRouterTest.swift in Sources */,
+				7BC60C4124D1FED80002B04C /* UIStoryboardMock.swift in Sources */,
 				7BC60C3924D1F2DF0002B04C /* MeepAPITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
