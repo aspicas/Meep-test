@@ -11,9 +11,10 @@
 class MapInteractorMock: MapInputInteractor {
     
     var presenter: MapOutputPresenter?
+    var isFetch = false
     
     func fetchTransport(_ networkManagement: MeepAPIProtocol.Type, lowerLeftLat: Double, lowerLeftLon: Double, upperRightLat: Double, upperRightLon: Double) {
-        
+        isFetch = true
     }
 
 }

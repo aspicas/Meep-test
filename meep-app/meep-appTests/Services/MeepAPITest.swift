@@ -84,7 +84,7 @@ class MeepAPITest: XCTestCase {
                             completion: { (result: Result<[Transport], CallError>) in
                                 switch result {
                                 case .success(let response):
-                                    XCTAssertTrue(response.count == 3, "The response get all the data")
+                                    XCTAssertTrue(response.count == 3, "The response doesn't get all the data")
                                 case .failure(let error):
                                     XCTFail("Error was not expected: \(error)")
                                 }
@@ -116,7 +116,7 @@ class MeepAPITest: XCTestCase {
                             completion: { (result: Result<[Transport], CallError>) in
                                 switch result {
                                 case .success(let response):
-                                    XCTAssertTrue(response.count == 0, "The response get empty data")
+                                    XCTAssertTrue(response.count == 0, "The response doesn't get empty data")
                                 case .failure(let error):
                                     XCTFail("Error was not expected: \(error)")
                                 }
@@ -144,7 +144,7 @@ class MeepAPITest: XCTestCase {
                                 case .success(_):
                                     XCTFail("Should not have response")
                                 case .failure(let error):
-                                    XCTAssertEqual(error, CallError.clientError, "400 error")
+                                    XCTAssertEqual(error, CallError.clientError, "No 400 error")
                                 }
                                 self.expectation.fulfill()
                             }, session: session)
@@ -170,7 +170,7 @@ class MeepAPITest: XCTestCase {
                                 case .success(_):
                                     XCTFail("Should not have response")
                                 case .failure(let error):
-                                    XCTAssertEqual(error, CallError.serverError, "500 error")
+                                    XCTAssertEqual(error, CallError.serverError, "No 500 error")
                                 }
                                 self.expectation.fulfill()
                             }, session: session)
@@ -196,7 +196,7 @@ class MeepAPITest: XCTestCase {
                                 case .success(_):
                                     XCTFail("Should not have response")
                                 case .failure(let error):
-                                    XCTAssertEqual(error, CallError.unknownError, "Unknown error")
+                                    XCTAssertEqual(error, CallError.unknownError, "No Unknown error")
                                 }
                                 self.expectation.fulfill()
                             }, session: session)
@@ -218,7 +218,7 @@ class MeepAPITest: XCTestCase {
                                 case .success(_):
                                     XCTFail("Should not have response")
                                 case .failure(let error):
-                                    XCTAssertEqual(error, CallError.noResponseError, "URL error")
+                                    XCTAssertEqual(error, CallError.noResponseError, "No URL error")
                                 }
                                 self.expectation.fulfill()
                             }, session: session)

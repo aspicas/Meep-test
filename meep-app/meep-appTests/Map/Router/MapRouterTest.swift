@@ -27,7 +27,7 @@ class MapRouterTest: XCTestCase {
                                                     interactor: MapInteractorMock(),
                                                     router: router)
         
-        XCTAssert(controller is MapViewControllerMock, "The controller is right")
+        XCTAssert(controller is MapViewControllerMock, "The controller is wrong")
         let resultClass = controller as! MapViewControllerMock
         XCTAssertTrue(resultClass.presenter != nil)
     }
