@@ -36,7 +36,6 @@ public enum CallError: Error {
     case urlError
     case unknownError
     case noResponseError
-    case noImage
 }
 
 class MeepAPI: MeepAPIProtocol {

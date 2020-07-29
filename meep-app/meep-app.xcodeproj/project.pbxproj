@@ -25,6 +25,8 @@
 		7BA7B0F624CF23F300A10BF5 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */; };
 		7BA7B0F824CF267600A10BF5 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */; };
 		7BC60C3524D1DF9A0002B04C /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3424D1DF9A0002B04C /* Pin.swift */; };
+		7BC60C3924D1F2DF0002B04C /* MeepAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3824D1F2DF0002B04C /* MeepAPITest.swift */; };
+		7BC60C3B24D1F3770002B04C /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		7BA7B0F524CF23F300A10BF5 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		7BA7B0F724CF267600A10BF5 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		7BC60C3424D1DF9A0002B04C /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		7BC60C3824D1F2DF0002B04C /* MeepAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepAPITest.swift; sourceTree = "<group>"; };
+		7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,7 @@
 		7B2E380324CCA5A200617413 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7BC60C3824D1F2DF0002B04C /* MeepAPITest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 		7B2E380424CCA60100617413 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -405,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC60C3B24D1F3770002B04C /* URLProtocolMock.swift in Sources */,
 				7B2E37DE24CC9F7800617413 /* meep_appTests.swift in Sources */,
+				7BC60C3924D1F2DF0002B04C /* MeepAPITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
