@@ -15,16 +15,19 @@ class MapPresenterMock: MapInputPresenter, MapOutputPresenter {
     
     var router: MapInputRouter?
     
+    var valid = false
+    var invalid = false
+    
     func fetchTransport(lowerLeftLat: Double, lowerLeftLon: Double, upperRightLat: Double, upperRightLon: Double) {
         
     }
     
     func handleTransportSuccess(transports: [Transport]) {
-        
+        valid = true
     }
     
     func handleError(error: Error) {
-        
+        invalid = true
     }
     
     

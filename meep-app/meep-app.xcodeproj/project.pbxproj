@@ -34,6 +34,8 @@
 		7BC60C4D24D205DB0002B04C /* MapPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C4C24D205DB0002B04C /* MapPresenterTest.swift */; };
 		7BC60C4F24D207890002B04C /* MapOutputViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C4E24D207890002B04C /* MapOutputViewMock.swift */; };
 		7BC60C5124D208140002B04C /* MapRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C5024D208140002B04C /* MapRouterMock.swift */; };
+		7BC60C5424D20DED0002B04C /* MapInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C5324D20DED0002B04C /* MapInteractorTest.swift */; };
+		7BC60C5624D20FC30002B04C /* MeepApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC60C5524D20FC30002B04C /* MeepApiMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		7BC60C4C24D205DB0002B04C /* MapPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterTest.swift; sourceTree = "<group>"; };
 		7BC60C4E24D207890002B04C /* MapOutputViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOutputViewMock.swift; sourceTree = "<group>"; };
 		7BC60C5024D208140002B04C /* MapRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterMock.swift; sourceTree = "<group>"; };
+		7BC60C5324D20DED0002B04C /* MapInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTest.swift; sourceTree = "<group>"; };
+		7BC60C5524D20FC30002B04C /* MeepApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepApiMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +276,7 @@
 				7BC60C4224D1FFC50002B04C /* Map */,
 				7BC60C3A24D1F3770002B04C /* URLProtocolMock.swift */,
 				7BC60C4024D1FED80002B04C /* UIStoryboardMock.swift */,
+				7BC60C5524D20FC30002B04C /* MeepApiMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 		7BC60C3C24D1FC420002B04C /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				7BC60C5224D20D920002B04C /* Interactor */,
 				7BC60C4924D205890002B04C /* Presenter */,
 				7BC60C3D24D1FD040002B04C /* Router */,
 			);
@@ -311,6 +317,14 @@
 				7BC60C4C24D205DB0002B04C /* MapPresenterTest.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7BC60C5224D20D920002B04C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7BC60C5324D20DED0002B04C /* MapInteractorTest.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,7 +481,9 @@
 				7BC60C3B24D1F3770002B04C /* URLProtocolMock.swift in Sources */,
 				7BC60C4624D200E10002B04C /* MapPresenterMock.swift in Sources */,
 				7BC60C4424D1FFFC0002B04C /* MapViewControllerMock.swift in Sources */,
+				7BC60C5624D20FC30002B04C /* MeepApiMock.swift in Sources */,
 				7BC60C5124D208140002B04C /* MapRouterMock.swift in Sources */,
+				7BC60C5424D20DED0002B04C /* MapInteractorTest.swift in Sources */,
 				7BC60C4824D201800002B04C /* MapInteractorMock.swift in Sources */,
 				7BC60C3F24D1FD320002B04C /* MapRouterTest.swift in Sources */,
 				7BC60C4124D1FED80002B04C /* UIStoryboardMock.swift in Sources */,
